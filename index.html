@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+<script type="text/javascript">
+    var mines = [{
+        production: 10,
+        man: 2
+    }, {
+        production: 20,
+        man: 1
+    }, {
+        production: 25,
+        man: 1
+    }, {
+        production: 15,
+        man: 2
+    }];
+
+    var people = 3;
+
+    console.log('You have ' + people + ' people, ' + mines.length + ' mines to mine.');
+
+    var decision = [];
+    var d = [];
+    for (var i = 0; i < mines.length; i++) {
+        d.push(0);
+    }
+    decision.push(d);
+    d = [];
+    for (i = 0; i < mines.length - 1; i++) {
+        d.push(0);
+    }
+    for (j = i; j < mines.length; j++) {
+        d.push(1);
+    }
+    decision.push(d);
+    d = [];
+
+    console.log('mines');
+    console.log(mines);
+    console.log('decision');
+    console.log(decision);
+</script>
+</body>
+</html>
